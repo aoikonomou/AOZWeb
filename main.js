@@ -3,23 +3,34 @@
  */
 
 
-function myArray(){
-
-var myArray = new Array();
-myArray = ["a", "b", "c"];
-alert("Blah " + myArray);
-
-}
-
 function jQueryHelloWorld(){
 
     // Some javascript/jQuery stuff
     //Print something in the document with jQuery
-    console.log("bla");
+    console.log("Writing to console");
+    alert("Writing to popup window ");
+    //Write to HTML
+    $( "#div1" ).append( "<p>jQuery wrote here</p>" );
 
 
 }
 
+function myArray(){
+
+    var myArray = [[1,50,100],[1,50,100],[1,50,100]];
+    console.log("Blah " + myArray);
+
+    for(i=0;i<3;i++){
+
+        for(j=0;j<3;j++){
+
+console.log(myArray[i][j]);
+
+        }
+
+    }
+
+}
 
 function drawArray(){
     for (i=1;i<10;i++){
