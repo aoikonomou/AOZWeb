@@ -1,3 +1,13 @@
+/*The rules for CSS rule cascading are complex -- rather than trying to paraphrase them badly,
+I'll simply refer you to the spec:
+
+http://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#cascade
+
+In short: more specific rules override more general ones. Specificity is defined based on how many IDs,
+classes, and element names are involved, as well as whether the !important declaration was used.
+When multiple rules of the same "specificity level" exist, whichever one appears last wins.*/
+
+/*Testing CSS HTML tags*/
 body {
     background-color: lightblue;
 }
@@ -17,5 +27,23 @@ div {
     padding: 5px;
     border: 1px solid navy;
     margin: 5px;
+
+}
+
+/*Testing CSS IDs*/
+#draggable {
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
+
+/*Testing CSS classes*/
+.a {
+    background-color: #d0d133;
+
+}
+
+.b {
+    background-color: #cf2cd1;
 
 }
