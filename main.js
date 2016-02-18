@@ -39,7 +39,10 @@ function drawArray() {
 
         for (j = 0; j < 3; j++) {
 
-            $("#body").append("<div>Vertical</div>").offset({top: (i * 10), left: 1})
+            $("#body").append("<div id='" +
+
+                i+"'>"+"Vertical</div>").offset({top: (i * 10), left: 1})
+
 
 
         }
