@@ -10,7 +10,7 @@ function jQueryHelloWorld() {
     console.log("Writing to console");
     //alert("Writing to popup window ");
     //Write to HTML
-    $("#div1").append("<p>jQuery wrote here</p>");
+    $("#ui").append("<p>jQuery wrote here</p>");
 
 
 }
@@ -35,13 +35,17 @@ function myArray() {
 }
 
 function drawArray() {
-    for (i = 0; i < 3; i++) {
 
-        for (j = 0; j < 3; j++) {
+    x=3;
+    y=3;
 
-            $("#body").append("<div id='" +
+    for (i = 0; i < x; i++) {
 
-                i+"'class='draggable'>"+"Vertical</div>").offset({top: (i * 10), left: j*10});
+        for (j = 0; j < y; j++) {
+
+            $("#body").append("<div id='" + i + "'class='tile'>" +i +j+ "</div>");
+            $("#i").css({left: i * 10, top: j * 10});
+            console.log(i, j);
 
         }
     }
@@ -51,5 +55,5 @@ function drawArray() {
 
 // jQuery drag and drop
 $(function () {
-    $(".draggable").draggable();
+    $(".tile").draggable();
 });

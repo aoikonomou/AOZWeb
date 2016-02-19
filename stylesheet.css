@@ -5,7 +5,12 @@ http://www.w3.org/TR/2011/REC-CSS2-20110607/cascade.html#cascade
 
 In short: more specific rules override more general ones. Specificity is defined based on how many IDs,
 classes, and element names are involved, as well as whether the !important declaration was used.
-When multiple rules of the same "specificity level" exist, whichever one appears last wins.*/
+When multiple rules of the same "specificity level" exist, whichever one appears last wins.
+
+. = css class
+# = css ID
+
+*/
 
 /*Testing CSS HTML tags*/
 body {
@@ -37,18 +42,6 @@ div {
 
 }
 
-/*Testing CSS classes*/
-.a {
-    background-color: #d0d133;
-
-}
-
-.b {
-    background-color: #cf2cd1;
-
-}
-
-
 #frame {
 
     background-color: rgba(137, 148, 174, 0.49);
@@ -60,9 +53,7 @@ div {
     border: 1px solid navy;
     margin: 5px;
 
-
 }
-
 
 #board {
 
@@ -79,7 +70,6 @@ div {
     border: 1px solid navy;
     margin: 5px;
 
-
 }
 
 #ui {
@@ -87,7 +77,6 @@ div {
     position: absolute;
     top: 0px;
     left: 620px;
-
 
     background-color: #868bd1;
     color: #080a0c;
@@ -104,7 +93,10 @@ div {
 /*Tile class for the game tiles inside the board div*/
 .tile {
 
-
+    color: #000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 
 
 }
