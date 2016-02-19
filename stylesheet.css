@@ -21,7 +21,6 @@ div {
 
     position:absolute;
 
-
     background-color: #23d13d;
     color: #001bff;
 
@@ -34,10 +33,8 @@ div {
 }
 
 /*Testing CSS IDs*/
-#draggable {
-    width: 150px;
-    height: 150px;
-    padding: 0.5em;
+.draggable {
+
 }
 
 /*Testing CSS classes*/
@@ -54,14 +51,11 @@ div {
 
 #frame {
 
-    position:absolute;
-
-
     background-color: rgba(137, 148, 174, 0.49);
     color: #7795bc;
 
-    width: 800px;
-    height: 700px;
+    width: 835px;
+    height: 615px;
     padding: 5px;
     border: 1px solid navy;
     margin: 5px;
@@ -72,10 +66,11 @@ div {
 
 #board {
 
-    position:absolute;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 
-
-    background-color: #23d13d;
+    background-color: #A5CF9F;
     color: #7795bc;
 
     width: 600px;
@@ -89,7 +84,9 @@ div {
 
 #ui {
 
-    position:relative;
+    position: absolute;
+    top: 0px;
+    left: 620px;
 
 
     background-color: #868bd1;
@@ -100,6 +97,14 @@ div {
     padding: 5px;
     border: 1px solid navy;
     margin: 5px;
+
+
+}
+
+/*Tile class for the game tiles inside the board div*/
+.tile {
+
+
 
 
 }

@@ -41,9 +41,7 @@ function drawArray() {
 
             $("#body").append("<div id='" +
 
-                i+"'>"+"Vertical</div>").offset({top: (i * 10), left: 1})
-
-
+                i+"'class='draggable'>"+"Vertical</div>").offset({top: (i * 10), left: j*10});
 
         }
     }
@@ -53,5 +51,5 @@ function drawArray() {
 
 // jQuery drag and drop
 $(function () {
-    $("div").draggable();
+    $(".draggable").draggable();
 });
