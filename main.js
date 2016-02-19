@@ -36,15 +36,19 @@ function myArray() {
 
 function drawArray() {
 
-    x=3;
-    y=3;
+    x=9;
+    y=9;
+    xOffset = 25;
+    yOffset = 100;
+
+    //Temporary document location offset until I clarify if I can position relatively with css
 
     for (i = 0; i < x; i++) {
 
         for (j = 0; j < y; j++) {
 
-            $("#body").append("<div id='" + i + "'class='tile'>" +i +j+ "</div>");
-            $("#i").css({left: i * 10, top: j * 10});
+            $("#body").append("<div id='" + i +j+ "'class='tile'>" +i +j+ "</div>");
+            $("#"+i+j).css({left: ((i * 65)+xOffset), top: ((j * 65)+yOffset)});
             console.log(i, j);
 
         }
