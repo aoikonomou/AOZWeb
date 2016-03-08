@@ -44,6 +44,7 @@ function drawArray() {
 
 // jQuery drag and drop
 $(function () {
+
     $(".tile").draggable();
 });
 
