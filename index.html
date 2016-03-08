@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="AOZWeb">
 <head>
     <meta charset="UTF-8">
     <title>AOZ ver 0.1</title>
@@ -19,9 +19,14 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
 </head>
-<body id="body">
+<body id="body" ng-controller="AOZWebViewController">
 
-<H1>I am trying to render an array with divs</H1>
+
+<div id="title">
+    <H1>Army Of Zombies: 30 Levels To Extraction</H1>
+    <H2>Div array</H2>
+</div>
+
 
 <!--My Game Interface (Divs)-->
 <div id="frame">
@@ -32,6 +37,9 @@
 
     <div id="ui">
         This is the UI
+        <p></p>
+        {{name}}
+        <br>
     </div>
 
 </div>

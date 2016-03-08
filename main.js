@@ -43,3 +43,12 @@ function drawArray() {
 $(function () {
     $(".tile").draggable();
 });
+
+// Testing Angular.JS
+
+var andreas = angular.module('AOZWeb',[]);
+andreas.controller('AOZWebViewController', ['$scope', function($scope){
+    $scope.name = 'Angular.JS wrote here';
+
+
+}]);
