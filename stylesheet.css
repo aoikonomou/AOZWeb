@@ -9,6 +9,7 @@ When multiple rules of the same "specificity level" exist, whichever one appears
 
 . = css class
 # = css ID
+position: relative; // This is relative to where the element would naturally occur on the page and that is that
 
 */
 
@@ -75,12 +76,20 @@ h1 {
 
 }
 
+
+#test {
+
+    position: relative;
+    top: 50px;
+    background-color: #001bff;
+}
+
 /*Tile class for the game tiles inside the board div*/
 .tile {
 
     background-color: #23d13d;
     color: #001bff;
-    position: absolute;
+    /*position: absolute;*/
 
     /*top: 0px;*/
     /*left: 0px;*/

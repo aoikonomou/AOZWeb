@@ -32,9 +32,13 @@ function drawArray() {
 
             $("#board").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
             $("#" + i + j).css({
-                left: ((i * xTileOffset) + xTilesTopOffset),
-                top: ((j * yTileOffset) + yTilesTopOffset)
+                //left: ((i * xTileOffset) + xTilesTopOffset),
+                //top: ((j * yTileOffset) + yTilesTopOffset)
+                float: 'left'
             });
+
+
+
             console.log(i, j);
 
         }
