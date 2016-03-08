@@ -19,8 +19,8 @@ function drawArray() {
 
     boardWidth = 9;
     boardHeight = 9;
-    xTilesTopOffset = 25; // From left side of div
-    yTilesTopOffset = 100; // From top corner of div
+    xTilesTopOffset = 10; // From left side of div
+    yTilesTopOffset = 10; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
     yTileOffset = 65; // X distance to put the next div (not really size)
 
@@ -30,7 +30,7 @@ function drawArray() {
 
         for (j = 0; j < boardHeight; j++) {
 
-            $("#body").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
+            $("#board").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
             $("#" + i + j).css({
                 left: ((i * xTileOffset) + xTilesTopOffset),
                 top: ((j * yTileOffset) + yTilesTopOffset)
