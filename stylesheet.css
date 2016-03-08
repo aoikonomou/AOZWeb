@@ -22,20 +22,6 @@ h1 {
     margin-left: 20px;
 }
 
-div {
-
-    position:absolute;
-
-    background-color: #23d13d;
-    color: #001bff;
-
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border: 1px solid navy;
-    margin: 5px;
-
-}
 
 /*Testing CSS IDs*/
 .draggable {
@@ -46,57 +32,63 @@ div {
 
     background-color: rgba(137, 148, 174, 0.49);
     color: #7795bc;
-
-    width: 835px;
-    height: 615px;
-    padding: 5px;
+    position: relative;
+    /*width: 835px;*/
+    /*height: 615px;*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
     border: 1px solid navy;
-    margin: 5px;
-
 }
 
 #board {
 
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    position: relative;
+    /*top: 0px;*/
+    /*left: 0px;*/
+    float: left;
 
     background-color: #A5CF9F;
     color: #7795bc;
 
-    width: 600px;
-    height: 600px;
-    padding: 5px;
+    /*width: 600px;*/
+    /*height: 600px;*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
     border: 1px solid navy;
-    margin: 5px;
-
 }
 
 #ui {
 
-    position: absolute;
-    top: 0px;
-    left: 620px;
+    position: relative;
+    /*top: 0px;*/
+    /*right: -200px;*/
+    float: right;
 
     background-color: #868bd1;
     color: #080a0c;
 
-    width: 200px;
-    height: 600px;
-    padding: 5px;
+    /*width: 200px;*/
+    /*height: 600px;*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
     border: 1px solid navy;
-    margin: 5px;
-
 
 }
 
 /*Tile class for the game tiles inside the board div*/
 .tile {
 
-    color: #000;
+    background-color: #23d13d;
+    color: #001bff;
     position: absolute;
-    top: 0px;
-    left: 0px;
 
+    /*top: 0px;*/
+    /*left: 0px;*/
+
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+    /*border: 1px solid navy;*/
 
 }

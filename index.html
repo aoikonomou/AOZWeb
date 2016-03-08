@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="AOZWeb">
+<html lang="en" ng-app="AOZWeb" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>AOZ ver 0.1</title>
@@ -22,17 +22,23 @@
 <body id="body" ng-controller="AOZWebViewController">
 
 
-<div id="title">
-    <H1>Army Of Zombies: 30 Levels To Extraction</H1>
-    <H2>Div array</H2>
-</div>
+
 
 
 <!--My Game Interface (Divs)-->
 <div id="frame">
     This is the frame
+
+    <div id="title">
+        <H1>Army Of Zombies: 30 Levels To Extraction</H1>
+        <H2>Div array</H2>
+    </div>
+
     <div id="board">
         This is the board
+        <script>
+            drawArray();
+        </script>
     </div>
 
     <div id="ui">
@@ -40,6 +46,7 @@
         <p></p>
         {{angularTestText}}
         <br>
+        <input type="button" onclick="myFunction()">Click Me</input>
     </div>
 
 </div>
@@ -47,7 +54,9 @@
 
 <script>
     jQueryHelloWorld();
-    drawArray();
+
+
+    function myFunction(){};
 </script>
 
 </body>
