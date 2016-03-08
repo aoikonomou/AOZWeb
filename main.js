@@ -17,8 +17,8 @@ function jQueryHelloWorld() {
 
 function drawArray() {
 
-    boardWidth=9;
-    boardHeight=9;
+    boardWidth = 9;
+    boardHeight = 9;
     xTilesTopOffset = 25; // From left side of div
     yTilesTopOffset = 100; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
@@ -30,8 +30,11 @@ function drawArray() {
 
         for (j = 0; j < boardHeight; j++) {
 
-            $("#body").append("<div id='" + i +j+ "'class='tile'>" +i +j+ "</div>");
-            $("#"+i+j).css({left: ((i * xTileOffset)+xTilesTopOffset), top: ((j * yTileOffset)+yTilesTopOffset)});
+            $("#body").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
+            $("#" + i + j).css({
+                left: ((i * xTileOffset) + xTilesTopOffset),
+                top: ((j * yTileOffset) + yTilesTopOffset)
+            });
             console.log(i, j);
 
         }
@@ -46,9 +49,11 @@ $(function () {
 
 // Testing Angular.JS
 
-var andreas = angular.module('AOZWeb',[]);
-andreas.controller('AOZWebViewController', ['$scope', function($scope){
-    $scope.name = 'Angular.JS wrote here';
+var andreas = angular.module('AOZWeb', []);
+andreas.controller('AOZWebViewController', ['$scope', function ($scope) {
 
+    // My variables go here
+    $scope.angularTestText = 'Angular.JS wrote here';
 
-}]);
+}
+]);
