@@ -22,16 +22,13 @@ function drawArray() {
 
     // Get the tile size variables from the css file. Pass everything necessary to the calculateBoardSizeFunction
 
-
-
-    numberOfTilesAcross = 9;
-    numberOfTilesAlong = 9;
+    numberOfTilesAcross = 4;
+    numberOfTilesAlong = 4;
     xTilesTopOffset = 10; // From left side of div
     yTilesTopOffset = 10; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
     yTileOffset = 65; // X distance to put the next div (not really size)
 
-    //Temporary document location offset until I clarify if I can position relatively with css
 
     for (i = 0; i < numberOfTilesAcross; i++) {
 
@@ -52,8 +49,9 @@ function drawArray() {
     }
 
     tileXSize = $(".tile").css("width");  //Can't find css element before it is used in the document. That's why it needs to be here as opposed to above.
-    console.log("The tile size is...:"+tileXSize);
-    $("#ui").append("<p>TileXSize is...</p>" + tileXSize); // Doesn't work currently.
+    tileXSizeInt=parseInt(tileXSize,10) //Parses CSS px text value to integer
+    console.log("The tile size is...:"+tileXSizeInt);
+    $("#ui").append("<p>TileXSize is...</p>"+ tileXSizeInt); // Doesn't work currently.
 
 
 }
