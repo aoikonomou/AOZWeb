@@ -22,8 +22,8 @@ function drawArray() {
 
     // Get the tile size variables from the css file. Pass everything necessary to the calculateBoardSizeFunction
 
-    numberOfTilesAcross = 4;
-    numberOfTilesAlong = 4;
+    numberOfTilesAcross = 9;
+    numberOfTilesAlong = 9;
     xTilesTopOffset = 10; // From left side of div
     yTilesTopOffset = 10; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
@@ -50,8 +50,11 @@ function drawArray() {
 
     tileXSize = $(".tile").css("width");  //Can't find css element before it is used in the document. That's why it needs to be here as opposed to above.
     tileXSizeInt=parseInt(tileXSize,10) //Parses CSS px text value to integer
-    console.log("The tile size is...:"+tileXSizeInt);
-    $("#ui").append("<p>TileXSize is...</p>"+ tileXSizeInt); // Doesn't work currently.
+
+    myBoardSize = calculateBoardDivSize(numberOfTilesAcross, numberOfTilesAlong,tileXSizeInt,50,5,1);
+
+    console.log("The tile size is...:"+myBoardSize);
+    $("#ui").append("<p>TileXSize is...</p>"+ myBoardSize); // Doesn't work currently.
 
 
 }
@@ -60,10 +63,9 @@ function drawArray() {
 function calculateBoardDivSize(numberOfTilesAcross, numberOfTilesAlong,tileXSize,tileYSize,tilePadding,tileBorderSize){
 
     boardWidth = numberOfTilesAcross*(tileXSize+tilePadding+(tileBorderSize*2));
-    boardWidth = numberOfTilesAlong*(tileYSize+tilePadding+(tileBorderSize*2));
+    boardHeight = numberOfTilesAlong*(tileYSize+tilePadding+(tileBorderSize*2));
 
-    return boardWidth;
-    return boardHeight;
+    return [boardWidth, boardHeight]; // Functions can't return more than one individual variable but can return arrays
 
 
 }
