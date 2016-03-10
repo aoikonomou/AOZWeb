@@ -17,8 +17,15 @@ function jQueryHelloWorld() {
 
 function drawArray() {
 
-    boardWidth = 9;
-    boardHeight = 9;
+    allTilesWidth =100; // Holds the result of the calulation of the size of the tiles array so that it can make the board div accordingly big.
+    allTilesHeight =100; // Holds the result of the calulation of the size of the tiles array so that it can make the board div accordingly big.
+
+    // Get the tile size variables from the css file. Pass everything necessary to the calculateBoardSizeFunction
+
+
+
+    numberOfTilesAcross = 9;
+    numberOfTilesAlong = 9;
     xTilesTopOffset = 10; // From left side of div
     yTilesTopOffset = 10; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
@@ -26,9 +33,9 @@ function drawArray() {
 
     //Temporary document location offset until I clarify if I can position relatively with css
 
-    for (i = 0; i < boardWidth; i++) {
+    for (i = 0; i < numberOfTilesAcross; i++) {
 
-        for (j = 0; j < boardHeight; j++) {
+        for (j = 0; j < numberOfTilesAlong; j++) {
 
             $("#board").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
             $("#" + i + j).css({
@@ -43,6 +50,24 @@ function drawArray() {
 
         }
     }
+
+    tileXSize = $(".tile").css("width");  //Can't find css element before it is used in the document. That's why it needs to be here as opposed to above.
+    console.log("The tile size is...:"+tileXSize);
+    $("#ui").append("<p>TileXSize is...</p>" + tileXSize); // Doesn't work currently.
+
+
+}
+
+
+function calculateBoardDivSize(numberOfTilesAcross, numberOfTilesAlong,tileXSize,tileYSize,tilePadding,tileBorderSize){
+
+    boardWidth = numberOfTilesAcross*(tileXSize+tilePadding+(tileBorderSize*2));
+    boardWidth = numberOfTilesAlong*(tileYSize+tilePadding+(tileBorderSize*2));
+
+    return boardWidth;
+    return boardHeight;
+
+
 }
 
 
