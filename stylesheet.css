@@ -53,7 +53,7 @@ h1 {
     background-color: #A5CF9F;
     color: #7795bc;
 
-    width: 80%;
+    /*width: 80%;*/
     /*height: 600px;*/
     /*padding: 5px;*/
     /*margin: 5px;*/
@@ -118,5 +118,47 @@ h1 {
     /*padding: 5px;*/
     /*margin: 5px;*/
     border: 1px solid navy;
+
+}
+
+#boardSize {
+
+    position: relative;
+    /*top: 0px;*/
+    /*right: -200px;*/
+    float: left;
+
+    background-color: #8cd1cb;
+    color: #080a0c;
+
+    /*width: 200px;*/
+    /*height: 600px;*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+    border: 1px solid navy;
+
+}
+
+#levelCreation {
+    position: relative;
+    /*top: 0px;*/
+    /*right: -200px;*/
+    float: left;
+
+    background-color: #8cd1cb;
+    color: #080a0c;
+
+    /*width: 200px;*/
+    /*height: 600px;*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+    border: 1px solid navy;
+
+}
+
+.floatClear {
+
+    width: 0px;
+    height: 0px;
 
 }

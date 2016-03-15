@@ -23,7 +23,7 @@ function drawArray() {
     // Get the tile size variables from the css file. Pass everything necessary to the calculateBoardSizeFunction
 
     numberOfTilesAcross = 9;
-    numberOfTilesAlong = 9;
+    numberOfTilesAlong = 13;
     xTilesTopOffset = 10; // From left side of div
     yTilesTopOffset = 10; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
@@ -46,6 +46,13 @@ function drawArray() {
             console.log(i, j);
 
         }
+
+        // The code below adds an invisible div anc clears its "floats" everytime a row has been drawn. Otherwise all rows would be next to each other as opposed to on-top of each other.
+        $("#board").append("<div id='" + i  + "'class='floatClear'>" + i + "</div>");
+        $("#" + i).css({
+            clear: 'left'
+        });
+
     }
 
     tileXSize = $(".tile").css("width");  //Can't find css element before it is used in the document. That's why it needs to be here as opposed to above.
