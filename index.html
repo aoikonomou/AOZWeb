@@ -48,6 +48,44 @@
             function myFunction(){};
         </script>
 
+        <div id="debugWindow"> This is the debug window
+
+            <form>
+                <div id="boardSize">
+                    Number of Horizontal tiles:
+                    <input type="NUMBER" name="horizontalTilesTextBox" value="5" maxlength="2"></input>
+                    <br>
+                    Number of Vertical tiles:
+                    <input type="NUMBER" name="verticalTilesTextBox" value="5" maxlength="2"></input>
+                    <br>
+                    Tile Size (pixels):
+                    <input type="NUMBER" name="tileSize" value="5" maxlength="2"></input>
+                    <br>
+                </div>
+                <br>
+                <div id="levelCreation">
+
+                    Enemies:
+                    <input type="NUMBER" maxlength="2"></input>
+                    <br>
+                    Obstacles:
+                    <input type="NUMBER" maxlength="2"></input>
+                    <br>
+                    Pickups:
+                    <input type="NUMBER" maxlength="2"></input>
+                    <br>
+
+
+                </div>
+
+                <button onclick="drawArray()">Create</button>
+
+
+            </form>
+
+
+        </div>
+
     </div>
 
     <div id="board">
@@ -57,45 +95,10 @@
         </script>
     </div>
 
-    <div id="debugWindow"> This is the debug window
-
-    <form>
-<div id="boardSize">
-        Number of Horizontal tiles:
-        <input type="NUMBER" name="horizontalTilesTextBox" value="5"></input>
-        <br>
-        Number of Vertical tiles:
-        <input type="NUMBER" name="verticalTilesTextBox" value="5"></input>
-        <br>
-        Tile Size (pixels):
-        <input type="NUMBER" name="tileSize" value="5"></input>
-        <br>
-</div>
-
-        <div id="levelCreation">
-
-            Enemies:
-            <input type="NUMBER"></input>
-            <br>
-            Obstacles:
-            <input type="NUMBER"></input>
-            <br>
-            Pickups:
-            <input type="NUMBER"></input>
-            <br>
-
-
-        </div>
-
-        <button onclick="drawArray()">Create</button>
-
-
-    </form>
-
-
-    </div>
 
 </div>
+
+
 
 
 
