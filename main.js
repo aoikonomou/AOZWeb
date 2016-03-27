@@ -33,9 +33,18 @@ function drawArray() {
     yTileOffset = 65; // X distance to put the next div (not really size)
 
 
+
+
+
     for (i = 0; i < numberOfTilesAcross; i++) {
 
         for (j = 0; j < numberOfTilesAlong; j++) {
+
+            var ii= i.toString(); // This is used for finding the previous board's divs and removing them in preparation for a new board. It is used with the .remove() jQuery function below.
+            var jj= j.toString();
+
+            $("#"+ii+jj).remove();  // Removing previous tiles (need to match previous map size though which is not currently implemented.
+            console.log("This "+ii+jj); // Debug info. Remove
 
             $("#board").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
             $("#" + i + j).css({
@@ -44,9 +53,6 @@ function drawArray() {
                 float: 'left'
             });
 
-
-
-            console.log(i, j);
 
         }
 
