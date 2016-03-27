@@ -2,6 +2,27 @@
  * Created by andreasoikonomou on 17/02/2016.
  */
 
+var lastNumberOfTilesAcross = 0;
+var lastnumberOfTilesAlong = 0;
+
+function deleteLastBoardTiles(lastNumberOfTilesAcross,lastnumberOfTilesAlong){
+
+    for (i = 0; i < lastNumberOfTilesAcross; i++) {
+
+        for (j = 0; j < lastnumberOfTilesAlong; j++) {
+
+            var ii= i.toString(); // This is used for finding the previous board's divs and removing them in preparation for a new board. It is used with the .remove() jQuery function below.
+            var jj= j.toString();
+
+            $("#"+ii+jj).remove();  // Removing previous tiles (need to match previous map size though which is not currently implemented.
+            console.log("This "+ii+jj); // Debug info. Remove
+
+        }
+    }
+
+
+}
+
 
 function jQueryHelloWorld() {
 
@@ -16,6 +37,8 @@ function jQueryHelloWorld() {
 
 
 function drawArray() {
+
+    deleteLastBoardTiles(lastNumberOfTilesAcross,lastnumberOfTilesAlong);
 
     allTilesWidth =100; // Holds the result of the calulation of the size of the tiles array so that it can make the board div accordingly big.
     allTilesHeight =100; // Holds the result of the calulation of the size of the tiles array so that it can make the board div accordingly big.
@@ -40,11 +63,7 @@ function drawArray() {
 
         for (j = 0; j < numberOfTilesAlong; j++) {
 
-            var ii= i.toString(); // This is used for finding the previous board's divs and removing them in preparation for a new board. It is used with the .remove() jQuery function below.
-            var jj= j.toString();
 
-            $("#"+ii+jj).remove();  // Removing previous tiles (need to match previous map size though which is not currently implemented.
-            console.log("This "+ii+jj); // Debug info. Remove
 
             $("#board").append("<div id='" + i + j + "'class='tile'>" + i + j + "</div>");
             $("#" + i + j).css({
@@ -72,6 +91,8 @@ function drawArray() {
     console.log("The tile size is...:"+myBoardSize);
     $("#ui").append("<p>TileXSize is...</p>"+ myBoardSize); // Doesn't work currently.
 
+    lastNumberOfTilesAcross=numberOfTilesAcross;
+    lastnumberOfTilesAlong=numberOfTilesAlong;
 
 }
 
