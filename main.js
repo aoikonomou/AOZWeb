@@ -22,8 +22,11 @@ function drawArray() {
 
     // Get the tile size variables from the css file. Pass everything necessary to the calculateBoardSizeFunction
 
-    numberOfTilesAcross = 9;
-    numberOfTilesAlong = 13;
+
+    numberOfTilesAcross = document.getElementsByName("horizontalTilesTextBox")[0].value;
+    numberOfTilesAlong = document.getElementsByName("verticalTilesTextBox")[0].value;
+    console.log("Number of tiles along " + numberOfTilesAlong);
+
     xTilesTopOffset = 10; // From left side of div
     yTilesTopOffset = 10; // From top corner of div
     xTileOffset = 65; // X distance to put the next div (not really size)
